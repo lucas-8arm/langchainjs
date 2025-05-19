@@ -237,6 +237,7 @@ export class OpenSearchVectorStore extends VectorStore {
       new Document({
         pageContent: hit._source[this.textFieldName],
         metadata: hit._source[this.metadataFieldName],
+        id: hit._id
       }),
       hit._score,
     ]);
